@@ -1,5 +1,4 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha384-ez1mqsOz/XDp2zHIctf5iL8Cce3FVoqUUCMFiWcFcD/C2MQ6bMOEMLaV0j2tP2eV" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-ez1mqsOz/XDp2zHIctf5iL8Cce3FVoqUUCMFiWcFcD/C2MQ6bMOEMLaV0j2tP2eV" crossorigin="anonymous">
 
 <!-- Meta Pixel Code -->
 <script>
@@ -24,8 +23,7 @@
     fbq('init', '980074280359918');
     fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=980074280359918&ev=PageView&noscript=1" /></noscript>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=980074280359918&ev=PageView&noscript=1" /></noscript>
 <!-- End Meta Pixel Code -->
 
 
@@ -56,16 +54,13 @@
             </style>
 
             <div class="masbro">
-                <a href="/index"><img src="{{ asset('assets/img/logo/logo3.png') }}" class="logo" style=""
-                        alt="Deskripsi Gambar">
+                <a href="/index"><img src="{{ asset('assets/img/logo/logo3.png') }}" class="logo" style="" alt="Deskripsi Gambar">
                 </a>
             </div>
 
             <form class="search-form" action="/search" method="get">
-                <input class="search-input" type="text" id="query" name="query"
-                    placeholder="Apa yang sedang kamu cari?">
-                <button class="search-button" type="submit"
-                    style="font-weight: 500; font-family: 'Montserrat', sans-serif;">
+                <input class="search-input" type="text" id="query" name="query" placeholder="Apa yang sedang kamu cari?">
+                <button class="search-button" type="submit" style="font-weight: 500; font-family: 'Montserrat', sans-serif;">
                     <i class="fas fa-magnifying-glass"></i> CARI
                 </button>
 
@@ -75,506 +70,440 @@
         </div>
         <div class="social-links d-none d-md-flex align-items-center" style="color: blue;">
             @auth
-                <!-- Right navbar links -->
-                <ul class="navbar-nav ml-auto">
-                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color:#ffffff;">
-                        <!--<i class="fas fa-user mr-2"></i> &nbsp;<span>{{ auth()->user()->name }}</span> &nbsp;<i class="icon-submenu lnr lnr-chevron-down"></i>-->
-                        <i class="fas fa-user mr-2"></i> &nbsp;<span>{{ Str::limit(auth()->user()->name, 11, '...') }}
-                        </span> &nbsp;<i class="icon-submenu lnr lnr-chevron-down"></i>
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color:#ffffff;">
+                    <!--<i class="fas fa-user mr-2"></i> &nbsp;<span>{{ auth()->user()->name }}</span> &nbsp;<i class="icon-submenu lnr lnr-chevron-down"></i>-->
+                    <i class="fas fa-user mr-2"></i> &nbsp;<span>{{ Str::limit(auth()->user()->name, 11, '...') }}
+                    </span> &nbsp;<i class="icon-submenu lnr lnr-chevron-down"></i>
+                </a>
+                <!-- Confirmation Modal -->
+                <style>
+                    .modal .modal-content .he button.btn:hover {
+                        color: white !important;
+                    }
+                </style>
+                <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel" aria-hidden="true" style="margin-top:100px;margin-left:-60px; ">
+                    <div class="modal-dialog" role="document" style="width:500px; ">
+                        <div class="modal-content" style="background-color:#fff;">
+                            <div class="modal-body text-center ">
+                                <p style="font-family: 'Poppins';font-weight:700;    letter-spacing: 1px;pointer-events: none; font-size:16px !important; color:#000;;">
+                                    Apakah kamu ingin menghapus Paket ini?</p>
 
 
-                    </a>
+                            </div>
 
 
-                    <!-- Confirmation Modal -->
+                            <div class="modal-footer d-flex justify-content-center he" style="padding: 3px;">
 
-                    <style>
-                        .modal .modal-content .he button.btn:hover {
-                            color: white !important;
-                        }
-                    </style>
-                    <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog"
-                        aria-labelledby="confirmationModalLabel" aria-hidden="true"
-                        style="margin-top:100px;margin-left:-60px; ">
-                        <div class="modal-dialog" role="document" style="width:500px; ">
-                            <div class="modal-content" style="background-color:#fff;">
-                                <div class="modal-body text-center ">
-                                    <p
-                                        style="font-family: 'Poppins';font-weight:700;    letter-spacing: 1px;pointer-events: none; font-size:16px !important; color:#000;;">
-                                        Apakah kamu ingin menghapus Paket ini?</p>
+                                <button type="button" class="btn" data-bs-dismiss="modal" style="font-family: 'Poppins'; background-color:#adb1b8; width: 18%; padding:2px; color:#09326f; font-weight: 500; margin-right: -5px; padding:1px; padding-top: 2px;">Batal</button>
 
+                                <a id="confirmDeleteBtn" class="btn" style="font-family: 'Poppins'; height: 28px; display: flex; align-items: center; justify-content: center; width: 20%; padding:px; font-weight: 400; background-color:red;">Hapus</a>
 
-                                </div>
-
-
-                                <div class="modal-footer d-flex justify-content-center he" style="padding: 3px;">
-
-                                    <button type="button" class="btn" data-bs-dismiss="modal"
-                                        style="font-family: 'Poppins'; background-color:#adb1b8; width: 18%; padding:2px; color:#09326f; font-weight: 500; margin-right: -5px; padding:1px; padding-top: 2px;">Batal</button>
-
-                                    <a id="confirmDeleteBtn" class="btn"
-                                        style="font-family: 'Poppins'; height: 28px; display: flex; align-items: center; justify-content: center; width: 20%; padding:px; font-weight: 400; background-color:red;">Hapus</a>
-
-                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Add this style tag to your existing styles -->
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true" style="margin-top: 100px; z-index: 1000;">
-                        <div class="modal-dialog" style="color: #09326f;">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <div class="modal-header">
-                                        <h4 class="modal-title" id="exampleModalLabel" style="    margin-top: -20px;"><i
-                                                class="nav-icon fas fa-user my-1 btn-sm-1"></i>
-                                            &nbsp;Profil Sobat Insans</h4>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-                                            style="margin-top: -25px;    margin-right: -23px;"></button>
-                                    </div>
-                                    <div class="modal-body" style="    margin-bottom: -30px;">
-                                        <div class="row">
-                                            <div class="col-md-3">
-                                                <h6><label for="nama">Nama </label></h6>
-                                            </div>
-                                            <div class="col-md-9">
-                                                <h6><label for="nama"> : {{ auth()->user()->name }}</label></h6>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-3">
-                                                <h6><label for="nama">Email </label></h6>
-                                            </div>
-                                            <div class="col-md-9">
-                                                <h6><label for="nama"> : {{ auth()->user()->email }}</label></h6>
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-
-                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
-                                        onclick="showLogoutConfirmation()"
-                                        style="padding: 5px; padding-bottom: 2px; padding-top: 2px;">
-                                        <i class="fas fa-sign-out-alt "></i> Keluar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Modal Konfirmasi Keluar -->
-                    <style>
-                        #konfirmasiModal .modal-content {
-                            background: url('{{ asset('assets/img/bg/bgkeluar.png') }}') center;
-
-                            background-size: cover;
-                        }
-
-                        #konfirmasiModal .modal-content {
-                            border: none;
-                        }
-
-                        .container img {
-                            /* width: 100%; */
-                            height: auto;
-                            display: inline-flex !important;
-                        }
-
-                        /*.modal .ha .btn:hover{*/
-                        /*    color:white !important;*/
-                        /*}*/
-                    </style>
-                    <div class="modal fade" id="konfirmasiModal" tabindex="-1" role="dialog"
-                        aria-labelledby="konfirmasiModalLabel" aria-hidden="true" style="margin-top:100px;">
-                        <div class="modal-dialog" role="document" style="width:450px;">
-                            <div class="modal-content ha">
-
-                                <div class="modal-body text-center ">
-                                    <p
-                                        style="font-family: 'Poppins';font-weight:700;    letter-spacing: 1px;pointer-events: none; font-size:16px !important; color:black;">
-                                        Apakah kamu yakin ingin keluar?</p>
-                                    <img src="{{ asset('assets/img/bg/keluar.png') }}" alt="Ikon Keluar"
-                                        style="width: 25%; height: 25%; margin-bottom: 10px; margin-top:30px;">
-                                </div>
-
-
-                                <div class="modal-footer d-flex justify-content-center" style="padding: 3px;gap:10px;">
-
-                                    <button type="button" class="btn" data-bs-dismiss="modal"
-                                        style="font-family: 'Poppins'; background-color:#adb1b8; width: 18%; padding:2px; color:#09326f; font-weight: 500; margin-right: -5px; padding:1px; padding-top: 2px;">Batal</button>
-
-                                    <a href="/logout" class="btn"
-                                        style="font-family: 'Poppins'; height: 28px; display: flex; align-items: center; justify-content: center; width: 20%; padding:px; font-weight: 400; background-color:#0F469A;">Keluar</a>
-
-                                </div>
-
-
-
-                                <script>
-                                    function showLogoutConfirmation() {
-                                        // Menutup model utama
-                                        $('#exampleModal').modal('hide');
-
-                                        // Menampilkan model konfirmasi keluar
-                                        $('#konfirmasiModal').modal('show');
-                                    }
-                                </script>
-
-                </ul>
-                <!-- Button trigger modal -->
-                <style>
-                    .floating-button {
-
-
-                        .flo .floating-button {
-                            position: fixed;
-                            bottom: 20px;
-                            /* Sesuaikan dengan jarak dari bawah */
-                            right: 20px;
-                            /* Sesuaikan dengan jarak dari kanan */
-                            z-index: 999;
-                            /* Sesuaikan dengan kebutuhan */
-                        }
-                    }
-                </style>
-                <button class="bi bi-bell-fill" data-bs-toggle="modal" data-bs-target="#notif"
-                    style="color: #ffffff;  font-size:21px; margin-top:15px; background-color:transparent; border-inline: none; border-block:none; position: relative;margin-bottom:10px;">
-                    <!-- Ikon lonceng notifikasi -->
-                    <span class="iconify" data-icon="bi:bell-fill" style="margin-right: 5px; margin-top:-5  px;"></span>
-
-                    <!-- Nomor checkout -->
-
-                </button>
-
-                <style>
-                    .text {
-                        flex: 2;
-                        /* padding: 20px; */
-                    }
-                </style>
+                <!-- Add this style tag to your existing styles -->
 
                 <!-- Modal -->
-                <div class="modal fade" id="notif" aria-labelledby="notif" style="margin-top:100px;"
-                    aria-hidden="true">
-                    <div class="modal-dialog" style=" max-height: 80vh; ">
-                        <div class=" modal-content" style="width: 90vh;">
-                            <div class="modal-header">
-                                <div class=""
-                                    style=" border-radius: 50px; background-color: #2660dd; padding: 6px;margin-left:200px;">
-                                    <h5 class="modal-title" id="konfirmasiModalLabel"
-                                        style="display: flex; align-items: center; justify-content: center;font-family: 'Poppins'; color:#fff;font-size:14px;">
-                                        Paket yang Kamu Pilih</h5>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin-top: 100px; z-index: 1000;">
+                    <div class="modal-dialog" style="color: #09326f;">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="exampleModalLabel" style="    margin-top: -20px;"><i class="nav-icon fas fa-user my-1 btn-sm-1"></i>
+                                        &nbsp;Profil Sobat Insans</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="margin-top: -25px;    margin-right: -23px;"></button>
                                 </div>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div class="modal-body">
-
-                            @php
-                                $counter = 0;
-                            @endphp
-
-                            @if (
-                                (auth()->check() && isset($dataPayment) && $dataPayment->isNotEmpty()) ||
-                                    (isset($dataPaymentEbook) && $dataPaymentEbook->isNotEmpty()))
-                                <div style="overflow-y: auto; max-height: 400px; /* set your desired max height */">
-                                    @foreach ($dataPayment as $payment)
-                                        {{-- Only consider payments without a photo and matching user email --}}
-                                        @if (empty($payment->foto) && $payment->email == auth()->user()->email)
-                                            @if ($payment->harga != 0)
-                                                <div class="card"
-                                                    style="border: 4px solid #10479B; border-radius: 15px; margin: 50px; margin-top: 30px; margin-bottom: 30px;">
-                                                    <div class="card-body"
-                                                        style="display: flex; align-items: center; margin-bottom: -10px;">
-                                                        <img src="{{ asset('assets/img/bg/notif.png') }}"
-                                                            class="card-img-top" alt="Card Image 1"
-                                                            style="width: 120px; border-radius: 8px; margin-right: 20px; margin-top: -28px;">
-
-                                                        <div class="text">
-                                                            @if (!empty($payment->program))
-                                                                <h5 class="card-title"
-                                                                    style="margin-bottom: 5px; font-family: 'Roboto', sans-serif; color: #2660dd; font-size: 12px;">
-                                                                    {{ $payment->program }}
-                                                                </h5>
-                                                            @endif
-
-                                                            @if (!empty($payment->paket))
-                                                                <h5 class="card-title"
-                                                                    style="margin-bottom: 0; font-family: 'Poppins'; color: #414D55; font-size: 20px; font-weight: 800;">
-                                                                    {{ $payment->paket }}
-                                                                </h5>
-                                                            @endif
-                                                            <img src="{{ asset('assets/img/bg/bintang.png') }}"
-                                                                class="card-img-top" alt="Card Image 1"
-                                                                style="width: 100px; border-radius: 8px; margin-right: 20px;">
-
-                                                            @if (!empty($payment->harga))
-                                                                <div
-                                                                    style="font-family: 'Poppins'; color: #09326f; font-size: 14px; font-weight: 500; margin-top: px;">
-                                                                    <b>
-                                                                        <p style="display: inline-block;">
-                                                                            Rp
-                                                                        </p>
-                                                                        <p
-                                                                            style="display: inline-block; margin: 0; pointer-events: none;">
-                                                                            {{ number_format($payment->harga, 0, ',', '.') }}
-                                                                        </p>
-                                                                    </b>
-                                                                </div>
-                                                            @endif
-
-                                                            <div style="flex: 1; margin-top: 20px;">
-                                                                <table>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <button type="button" class="btn btn-primary"
-                                                                                style="font-family: 'Poppins'; background-color: #adb1b8; width: 100%; padding: 7px; border-radius: 10px; color: #09326f; font-weight: 800; font-size: 12px;">
-                                                                                <a href=""
-                                                                                    style="color: inherit; text-decoration: none; margin-right:14px;">Bayar
-                                                                                    Sekarang</a>
-                                                                            </button>
-                                                                        </td>
-                                                                        <td>
-                                                                            <style>
-                                                                                .delete-icon {
-                                                                                    color: #ff6b6b;
-                                                                                    font-size: 24px;
-                                                                                    margin-top: -50px;
-                                                                                    cursor: pointer;
-                                                                                    margin-left: 10px;
-                                                                                    transition: color 0.3s ease;
-                                                                                    /* Adding transition for smooth color change */
-                                                                                }
-
-                                                                                .delete-icon:hover {
-                                                                                    color: #d9534f;
-                                                                                    /* Change color on hover */
-                                                                                }
-                                                                            </style>
-
-                                                                            <link rel="stylesheet"
-                                                                                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-                                                                                integrity="sha384-ez1mqsOz/XDp2zHIctf5iL8Cce3FVoqUUCMFiWcFcD/C2MQ6bMOEMLaV0j2tP2eV"
-                                                                                crossorigin="anonymous">
-
-                                                                            <i class="fas fa-trash delete-icon"
-                                                                                style="color: #ff6b6b; font-size: 25px; margin-top:-50px; cursor: pointer; margin-left: 10px;"
-                                                                                onclick="deletePayment({{ $payment->id }})"></i>
-
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </div>
-
-                                                            @php
-                                                                $counter++;
-                                                            @endphp
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            @endif
-                                        @endif
-                                    @endforeach
-
-                                    {{-- Iterasi untuk pembayaran ebook --}}
-                                    @foreach ($dataPaymentEbook as $paymentEbook)
-                                        {{-- Hanya mempertimbangkan pembayaran ebook tanpa foto dan email pengguna yang cocok --}}
-                                        @if (empty($paymentEbook->foto) && $paymentEbook->id_users == auth()->id())
-                                            @if ($paymentEbook->harga != 0)
-                                                <div class="card"
-                                                    style="border: 4px solid #10479B; border-radius: 15px; margin: 50px; margin-top: 30px; margin-bottom: 30px;">
-                                                    <div class="card-body"
-                                                        style="display: flex; align-items: center; margin-bottom: -10px;">
-
-                                                        @if ($paymentEbook->voucher->gambar_1)
-                                                            <img src="foto_upload/{{ $paymentEbook->voucher->gambar_1 }}"
-                                                                class="card-img-top" alt="Card Image 1"
-                                                                style="width: 120px; border-radius: 8px; margin-right: 20px; margin-top: -10px;">
-                                                        @endif
-                                                        <div class="text">
-                                                            @if ($paymentEbook->voucher->judul_ebook)
-                                                                <h5 class="card-title"
-                                                                    style="margin-bottom: 5px; font-family: 'Roboto', sans-serif; color: #2660dd; font-size: 12px;">
-                                                                    {{ $paymentEbook->voucher->judul_ebook }}
-                                                                </h5>
-                                                            @endif
-
-                                                            <h5 class="card-title"
-                                                                style="margin-bottom: 0; font-family: 'Poppins'; color: #414D55; font-size: 20px; font-weight: 800;">
-                                                                Ebook
-                                                            </h5>
-                                                            <img src="{{ asset('assets/img/bg/bintang.png') }}"
-                                                                class="card-img-top" alt="Card Image 1"
-                                                                style="width: 100px; border-radius: 8px; margin-right: 20px;">
-                                                            @if (!empty($paymentEbook->harga))
-                                                                <div
-                                                                    style="font-family: 'Poppins'; color: #09326f; font-size: 14px; font-weight: 500; margin-top: px;">
-                                                                    <b>
-                                                                        <p style="display: inline-block;">Rp</p>
-                                                                        <p
-                                                                            style="display: inline-block; margin: 0; pointer-events: none;">
-                                                                            {{ number_format($paymentEbook->harga, 0, ',', '.') }}
-                                                                        </p>
-                                                                    </b>
-                                                                </div>
-                                                            @endif
-
-                                                            {{-- Bagian tombol dan ikon hapus --}}
-                                                            <div style="flex: 1; margin-top: 20px;">
-                                                                <table>
-                                                                    <tr>
-                                                                        {{-- Tombol bayar --}}
-                                                                        <td>
-                                                                            <button type="button" class="btn btn-primary"
-                                                                                style="font-family: 'Poppins'; background-color: #adb1b8; width: 100%; padding: 7px; border-radius: 10px; color: #09326f; font-weight: 800; font-size: 12px;">
-                                                                                <a href=""
-                                                                                    style="color: inherit; text-decoration: none; margin-right:14px;">Bayar
-                                                                                    Sekarang</a>
-                                                                            </button>
-                                                                        </td>
-
-                                                                        {{-- Ikon hapus --}}
-                                                                        <td>
-                                                                            <style>
-                                                                                .delete-icon {
-                                                                                    color: #ff6b6b;
-                                                                                    font-size: 24px;
-                                                                                    margin-top: -50px;
-                                                                                    cursor: pointer;
-                                                                                    margin-left: 10px;
-                                                                                    transition: color 0.3s ease;
-                                                                                }
-
-                                                                                .delete-icon:hover {
-                                                                                    color: #d9534f;
-                                                                                }
-                                                                            </style>
-
-                                                                            <link rel="stylesheet"
-                                                                                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-                                                                                integrity="sha384-ez1mqsOz/XDp2zHIctf5iL8Cce3FVoqUUCMFiWcFcD/C2MQ6bMOEMLaV0j2tP2eV"
-                                                                                crossorigin="anonymous">
-
-                                                                            <i class="fas fa-trash delete-icon"
-                                                                                style="color: #ff6b6b; font-size: 25px; margin-top:-50px; cursor: pointer; margin-left: 10px;"
-                                                                                onclick="deletePaymentEbook({{ $paymentEbook->id }})"></i>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </div>
-
-                                                            {{-- Hitung jumlah notifikasi --}}
-                                                            @php
-                                                                $counter++;
-                                                            @endphp
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            @endif
-                                        @endif
-                                    @endforeach
-                                </div>
-
-                                @if ($counter == 0)
-                                    {{-- Tidak ada notifikasi --}}
-                                    <style>
-                                        .icon-container {
-                                            /*text-align: center;*/
-                                        }
-
-                                        /* Adjust the size of the icon */
-                                        #movingIcon {
-                                            font-size: 100px;
-                                            /*text-align: center;*/
-                                        }
-                                    </style>
-
-                                    <div class="icon-container" style="margin-top: 50px; margin-left: 250px; ">
-                                        <i class="fas fa-shopping-cart" id="movingIcon"
-                                            style="font-size: 80px; color: black;"></i>
+                                <div class="modal-body" style="    margin-bottom: -30px;">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <h6><label for="nama">Nama </label></h6>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <h6><label for="nama"> : {{ auth()->user()->name }}</label></h6>
+                                        </div>
                                     </div>
-                                    <br>
-                                    <p
-                                        style="margin-top: 10px; text-align: center; font-size: 20px; margin-bottom: 20px; pointer-events: none; color: black;">
-                                        Kamu tidak memiliki riwayat apapun</p>
-                                @endif
-                            @else
-                                {{-- Tampilkan keranjang belanja jika data kosong --}}
-                                <div class="icon-container" style="margin-top: 50px;     margin-left: 250px;">
-                                    <i class="fas fa-shopping-cart" id="movingIcon"
-                                        style="font-size: 80px; color: black;"></i>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <h6><label for="nama">Email </label></h6>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <h6><label for="nama"> : {{ auth()->user()->email }}</label></h6>
+                                        </div>
+                                    </div>
+
+
                                 </div>
+                            </div>
+                            <div class="modal-footer">
 
-                                <br>
-                                <p
-                                    style="margin-top: 10px; text-align: center; font-size: 20px; margin-bottom: 20px; pointer-events: none; color: black;">
-                                    Kamu tidak memiliki riwayat apapun</p>
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="showLogoutConfirmation()" style="padding: 5px; padding-bottom: 2px; padding-top: 2px;">
+                                    <i class="fas fa-sign-out-alt "></i> Keluar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal Konfirmasi Keluar -->
+                <style>
+                    #konfirmasiModal .modal-content {
+                        background: url('{{ asset(' assets/img/bg/bgkeluar.png') }}') center;
+
+                        background-size: cover;
+                    }
+
+                    #konfirmasiModal .modal-content {
+                        border: none;
+                    }
+
+                    .container img {
+                        /* width: 100%; */
+                        height: auto;
+                        display: inline-flex !important;
+                    }
+
+                    /*.modal .ha .btn:hover{*/
+                    /*    color:white !important;*/
+                    /*}*/
+                </style>
+                <div class="modal fade" id="konfirmasiModal" tabindex="-1" role="dialog" aria-labelledby="konfirmasiModalLabel" aria-hidden="true" style="margin-top:100px;">
+                    <div class="modal-dialog" role="document" style="width:450px;">
+                        <div class="modal-content ha">
+
+                            <div class="modal-body text-center ">
+                                <p style="font-family: 'Poppins';font-weight:700;    letter-spacing: 1px;pointer-events: none; font-size:16px !important; color:black;">
+                                    Apakah kamu yakin ingin keluar?</p>
+                                <img src="{{ asset('assets/img/bg/keluar.png') }}" alt="Ikon Keluar" style="width: 25%; height: 25%; margin-bottom: 10px; margin-top:30px;">
+                            </div>
+
+
+                            <div class="modal-footer d-flex justify-content-center" style="padding: 3px;gap:10px;">
+
+                                <button type="button" class="btn" data-bs-dismiss="modal" style="font-family: 'Poppins'; background-color:#adb1b8; width: 18%; padding:2px; color:#09326f; font-weight: 500; margin-right: -5px; padding:1px; padding-top: 2px;">Batal</button>
+
+                                <a href="/logout" class="btn" style="font-family: 'Poppins'; height: 28px; display: flex; align-items: center; justify-content: center; width: 20%; padding:px; font-weight: 400; background-color:#0F469A;">Keluar</a>
+
+                            </div>
+
+
+
+                            <script>
+                                function showLogoutConfirmation() {
+                                    // Menutup model utama
+                                    $('#exampleModal').modal('hide');
+
+                                    // Menampilkan model konfirmasi keluar
+                                    $('#konfirmasiModal').modal('show');
+                                }
+                            </script>
+
+            </ul>
+            <!-- Button trigger modal -->
+            <style>
+                .floating-button {
+                    .flo .floating-button {
+                        position: fixed;
+                        bottom: 20px;
+                        /* Sesuaikan dengan jarak dari bawah */
+                        right: 20px;
+                        /* Sesuaikan dengan jarak dari kanan */
+                        z-index: 999;
+                        /* Sesuaikan dengan kebutuhan */
+                    }
+                }
+            </style>
+            <button class="bi bi-bell-fill" data-bs-toggle="modal" data-bs-target="#notif" style="color: #ffffff;  font-size:21px; margin-top:15px; background-color:transparent; border-inline: none; border-block:none; position: relative;margin-bottom:10px;">
+                <!-- Ikon lonceng notifikasi -->
+                <span class="iconify" data-icon="bi:bell-fill" style="margin-right: 5px; margin-top:-5  px;"></span>
+
+                <!-- Nomor checkout -->
+
+            </button>
+
+            <style>
+                .text {
+                    flex: 2;
+                    /* padding: 20px; */
+                }
+            </style>
+
+            <!-- Modal -->
+            <div class="modal fade" id="notif" aria-labelledby="notif" style="margin-top:100px;" aria-hidden="true">
+                <div class="modal-dialog" style=" max-height: 80vh; ">
+                    <div class=" modal-content" style="width: 90vh;">
+                        <div class="modal-header">
+                            <div class="" style=" border-radius: 50px; background-color: #2660dd; padding: 6px;margin-left:200px;">
+                                <h5 class="modal-title" id="konfirmasiModalLabel" style="display: flex; align-items: center; justify-content: center;font-family: 'Poppins'; color:#fff;font-size:14px;">
+                                    Paket yang Kamu Pilih</h5>
+                            </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div class="modal-body">
+
+                        @php
+                        $counter = 0;
+                        @endphp
+
+                        @if (
+                        (auth()->check() && isset($dataPayment) && $dataPayment->isNotEmpty()) ||
+                        (isset($dataPaymentEbook) && $dataPaymentEbook->isNotEmpty()))
+                        <div style="overflow-y: auto; max-height: 400px; /* set your desired max height */">
+                            @foreach ($dataPayment as $payment)
+                            {{-- Only consider payments without a photo and matching user email --}}
+                            @if (empty($payment->foto) && $payment->email == auth()->user()->email)
+                            @if ($payment->harga != 0)
+                            <div class="card" style="border: 4px solid #10479B; border-radius: 15px; margin: 50px; margin-top: 30px; margin-bottom: 30px;">
+                                <div class="card-body" style="display: flex; align-items: center; margin-bottom: -10px;">
+                                    <img src="{{ asset('assets/img/bg/notif.png') }}" class="card-img-top" alt="Card Image 1" style="width: 120px; border-radius: 8px; margin-right: 20px; margin-top: -28px;">
+
+                                    <div class="text">
+                                        @if (!empty($payment->program))
+                                        <h5 class="card-title" style="margin-bottom: 5px; font-family: 'Roboto', sans-serif; color: #2660dd; font-size: 12px;">
+                                            {{ $payment->program }}
+                                        </h5>
+                                        @endif
+
+                                        @if (!empty($payment->paket))
+                                        <h5 class="card-title" style="margin-bottom: 0; font-family: 'Poppins'; color: #414D55; font-size: 20px; font-weight: 800;">
+                                            {{ $payment->paket }}
+                                        </h5>
+                                        @endif
+                                        <img src="{{ asset('assets/img/bg/bintang.png') }}" class="card-img-top" alt="Card Image 1" style="width: 100px; border-radius: 8px; margin-right: 20px;">
+
+                                        @if (!empty($payment->harga))
+                                        <div style="font-family: 'Poppins'; color: #09326f; font-size: 14px; font-weight: 500; margin-top: px;">
+                                            <b>
+                                                <p style="display: inline-block;">
+                                                    Rp
+                                                </p>
+                                                <p style="display: inline-block; margin: 0; pointer-events: none;">
+                                                    {{ number_format($payment->harga, 0, ',', '.') }}
+                                                </p>
+                                            </b>
+                                        </div>
+                                        @endif
+
+                                        <div style="flex: 1; margin-top: 20px;">
+                                            <table>
+                                                <tr>
+                                                    <td>
+                                                        <button type="button" class="btn btn-primary" style="font-family: 'Poppins'; background-color: #adb1b8; width: 100%; padding: 7px; border-radius: 10px; color: #09326f; font-weight: 800; font-size: 12px;">
+                                                            <a href="" style="color: inherit; text-decoration: none; margin-right:14px;">Bayar
+                                                                Sekarang</a>
+                                                        </button>
+                                                    </td>
+                                                    <td>
+                                                        <style>
+                                                            .delete-icon {
+                                                                color: #ff6b6b;
+                                                                font-size: 24px;
+                                                                margin-top: -50px;
+                                                                cursor: pointer;
+                                                                margin-left: 10px;
+                                                                transition: color 0.3s ease;
+                                                                /* Adding transition for smooth color change */
+                                                            }
+
+                                                            .delete-icon:hover {
+                                                                color: #d9534f;
+                                                                /* Change color on hover */
+                                                            }
+                                                        </style>
+
+                                                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-ez1mqsOz/XDp2zHIctf5iL8Cce3FVoqUUCMFiWcFcD/C2MQ6bMOEMLaV0j2tP2eV" crossorigin="anonymous">
+
+                                                        <i class="fas fa-trash delete-icon" style="color: #ff6b6b; font-size: 25px; margin-top:-50px; cursor: pointer; margin-left: 10px;" onclick="deletePayment({{ $payment->id }})"></i>
+
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+
+                                        @php
+                                        $counter++;
+                                        @endphp
+                                    </div>
+                                </div>
+                            </div>
                             @endif
+                            @endif
+                            @endforeach
 
+                            {{-- Iterasi untuk pembayaran ebook --}}
+                            @foreach ($dataPaymentEbook as $paymentEbook)
+                            {{-- Hanya mempertimbangkan pembayaran ebook tanpa foto dan email pengguna yang cocok --}}
+                            @if (empty($paymentEbook->foto) && $paymentEbook->id_users == auth()->id())
+                            @if ($paymentEbook->harga != 0)
+                            <div class="card" style="border: 4px solid #10479B; border-radius: 15px; margin: 50px; margin-top: 30px; margin-bottom: 30px;">
+                                <div class="card-body" style="display: flex; align-items: center; margin-bottom: -10px;">
+
+                                    @if ($paymentEbook->voucher->gambar_1)
+                                    <img src="foto_upload/{{ $paymentEbook->voucher->gambar_1 }}" class="card-img-top" alt="Card Image 1" style="width: 120px; border-radius: 8px; margin-right: 20px; margin-top: -10px;">
+                                    @endif
+                                    <div class="text">
+                                        @if ($paymentEbook->voucher->judul_ebook)
+                                        <h5 class="card-title" style="margin-bottom: 5px; font-family: 'Roboto', sans-serif; color: #2660dd; font-size: 12px;">
+                                            {{ $paymentEbook->voucher->judul_ebook }}
+                                        </h5>
+                                        @endif
+
+                                        <h5 class="card-title" style="margin-bottom: 0; font-family: 'Poppins'; color: #414D55; font-size: 20px; font-weight: 800;">
+                                            Ebook
+                                        </h5>
+                                        <img src="{{ asset('assets/img/bg/bintang.png') }}" class="card-img-top" alt="Card Image 1" style="width: 100px; border-radius: 8px; margin-right: 20px;">
+                                        @if (!empty($paymentEbook->harga))
+                                        <div style="font-family: 'Poppins'; color: #09326f; font-size: 14px; font-weight: 500; margin-top: px;">
+                                            <b>
+                                                <p style="display: inline-block;">Rp</p>
+                                                <p style="display: inline-block; margin: 0; pointer-events: none;">
+                                                    {{ number_format($paymentEbook->harga, 0, ',', '.') }}
+                                                </p>
+                                            </b>
+                                        </div>
+                                        @endif
+
+                                        {{-- Bagian tombol dan ikon hapus --}}
+                                        <div style="flex: 1; margin-top: 20px;">
+                                            <table>
+                                                <tr>
+                                                    {{-- Tombol bayar --}}
+                                                    <td>
+                                                        <button type="button" class="btn btn-primary" style="font-family: 'Poppins'; background-color: #adb1b8; width: 100%; padding: 7px; border-radius: 10px; color: #09326f; font-weight: 800; font-size: 12px;">
+                                                            <a href="" style="color: inherit; text-decoration: none; margin-right:14px;">Bayar
+                                                                Sekarang</a>
+                                                        </button>
+                                                    </td>
+
+                                                    {{-- Ikon hapus --}}
+                                                    <td>
+                                                        <style>
+                                                            .delete-icon {
+                                                                color: #ff6b6b;
+                                                                font-size: 24px;
+                                                                margin-top: -50px;
+                                                                cursor: pointer;
+                                                                margin-left: 10px;
+                                                                transition: color 0.3s ease;
+                                                            }
+
+                                                            .delete-icon:hover {
+                                                                color: #d9534f;
+                                                            }
+                                                        </style>
+
+                                                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-ez1mqsOz/XDp2zHIctf5iL8Cce3FVoqUUCMFiWcFcD/C2MQ6bMOEMLaV0j2tP2eV" crossorigin="anonymous">
+
+                                                        <i class="fas fa-trash delete-icon" style="color: #ff6b6b; font-size: 25px; margin-top:-50px; cursor: pointer; margin-left: 10px;" onclick="deletePaymentEbook({{ $paymentEbook->id }})"></i>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+
+                                        {{-- Hitung jumlah notifikasi --}}
+                                        @php
+                                        $counter++;
+                                        @endphp
+                                    </div>
+                                </div>
+                            </div>
+                            @endif
+                            @endif
+                            @endforeach
                         </div>
 
+                        @if ($counter == 0)
+                        {{-- Tidak ada notifikasi --}}
+                        <style>
+                            .icon-container {
+                                /*text-align: center;*/
+                            }
+
+                            /* Adjust the size of the icon */
+                            #movingIcon {
+                                font-size: 100px;
+                                /*text-align: center;*/
+                            }
+                        </style>
+
+                        <div class="icon-container" style="margin-top: 50px; margin-left: 250px; ">
+                            <i class="fas fa-shopping-cart" id="movingIcon" style="font-size: 80px; color: black;"></i>
+                        </div>
+                        <br>
+                        <p style="margin-top: 10px; text-align: center; font-size: 20px; margin-bottom: 20px; pointer-events: none; color: black;">
+                            Kamu tidak memiliki riwayat apapun</p>
+                        @endif
+                        @else
+                        {{-- Tampilkan keranjang belanja jika data kosong --}}
+                        <div class="icon-container" style="margin-top: 50px;     margin-left: 250px;">
+                            <i class="fas fa-shopping-cart" id="movingIcon" style="font-size: 80px; color: black;"></i>
+                        </div>
+
+                        <br>
+                        <p style="margin-top: 10px; text-align: center; font-size: 20px; margin-bottom: 20px; pointer-events: none; color: black;">
+                            Kamu tidak memiliki riwayat apapun</p>
+                        @endif
+
                     </div>
-                    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+                </div>
+                <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 
 
-                    <!-- Add the script to open the modal and handle confirmation -->
+                <!-- Add the script to open the modal and handle confirmation -->
                 @else
-                    <ul class="navbar-nav ml-auto">
-                        <li class="login-button">
-                            <div class="login-btn" style="margin-left:10px;"><a href="/login">Masuk</a></div>
-                        </li>
-                    </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="login-button">
+                        <div class="login-btn" style="margin-left:10px;"><a href="/login">Masuk</a></div>
+                    </li>
+                </ul>
                 @endauth
             </div>
             @php
-                $totalCounter = 0;
+            $totalCounter = 0;
             @endphp
 
             @if (auth()->check())
-                {{-- Hitung pembayaran paket --}}
-                @if (isset($dataPayment) && $dataPayment->isNotEmpty())
-                    @foreach ($dataPayment as $payment)
-                        {{-- Hanya mempertimbangkan pembayaran tanpa foto dan email pengguna yang cocok --}}
-                        @if (empty($payment->foto) && $payment->email == auth()->user()->email)
-                            {{-- Periksa field yang tidak kosong dan increment counter --}}
-                            @if (!empty($payment->program) || !empty($payment->paket) || !empty($payment->harga))
-                                @php
-                                    $totalCounter++;
-                                @endphp
-                            @endif
-                        @endif
-                    @endforeach
-                @endif
+            {{-- Hitung pembayaran paket --}}
+            @if (isset($dataPayment) && $dataPayment->isNotEmpty())
+            @foreach ($dataPayment as $payment)
+            {{-- Hanya mempertimbangkan pembayaran tanpa foto dan email pengguna yang cocok --}}
+            @if (empty($payment->foto) && $payment->email == auth()->user()->email)
+            {{-- Periksa field yang tidak kosong dan increment counter --}}
+            @if (!empty($payment->program) || !empty($payment->paket) || !empty($payment->harga))
+            @php
+            $totalCounter++;
+            @endphp
+            @endif
+            @endif
+            @endforeach
+            @endif
 
-                {{-- Hitung pembayaran ebook --}}
-                @if (isset($dataPaymentEbook) && $dataPaymentEbook->isNotEmpty())
-                    @foreach ($dataPaymentEbook as $paymentEbook)
-                        {{-- Hanya mempertimbangkan pembayaran ebook tanpa foto dan email pengguna yang cocok --}}
-                        @if (empty($paymentEbook->foto) && $paymentEbook->id_users == auth()->id())
-                            {{-- Periksa field yang tidak kosong dan increment counter --}}
-                            @if (!empty($paymentEbook->paket) || !empty($paymentEbook->harga))
-                                @php
-                                    $totalCounter++;
-                                @endphp
-                            @endif
-                        @endif
-                    @endforeach
-                @endif
+            {{-- Hitung pembayaran ebook --}}
+            @if (isset($dataPaymentEbook) && $dataPaymentEbook->isNotEmpty())
+            @foreach ($dataPaymentEbook as $paymentEbook)
+            {{-- Hanya mempertimbangkan pembayaran ebook tanpa foto dan email pengguna yang cocok --}}
+            @if (empty($paymentEbook->foto) && $paymentEbook->id_users == auth()->id())
+            {{-- Periksa field yang tidak kosong dan increment counter --}}
+            @if (!empty($paymentEbook->paket) || !empty($paymentEbook->harga))
+            @php
+            $totalCounter++;
+            @endphp
+            @endif
+            @endif
+            @endforeach
+            @endif
 
-                {{-- Tampilkan counter jika lebih dari 0 --}}
-                @if ($totalCounter > 0)
-                    <div style="position: absolute; top: 7px; padding-left: 135px;">
-                        <span class="checkout-number"
-                            style="background-color: red; color: white; border-radius: 100%; padding: 3px 6px; font-size: 12px;">
-                            {{ $totalCounter }}
-                        </span>
-                    </div>
-                @endif
+            {{-- Tampilkan counter jika lebih dari 0 --}}
+            @if ($totalCounter > 0)
+            <div style="position: absolute; top: 7px; padding-left: 135px;">
+                <span class="checkout-number" style="background-color: red; color: white; border-radius: 100%; padding: 3px 6px; font-size: 12px;">
+                    {{ $totalCounter }}
+                </span>
+            </div>
+            @endif
             @endif
 
         </div>
@@ -590,18 +519,14 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto{{ Request::is('/') ? ' active' : '' }}" href="/index"
-                        style="margin-right:30px">Home</a></li>
-                <li
-                    class="dropdown scrollto {{ Request::is('bimbingan-skripsi-online*', 'bimbangan-mata-kuliah-jurusan*', 'nonaktif*') ? ' ' : '' }}">
-                    <a style="cursor: pointer;"><span>Program</span> <i class=" nav-link scrollto fas fa-caret-down"
-                            style="margin-left:-10px;"></i></a>
+                <li><a class="nav-link scrollto{{ Request::is('/') ? ' active' : '' }}" href="/index" style="margin-right:30px">Home</a></li>
+                <li class="dropdown scrollto {{ Request::is('bimbingan-skripsi-online*', 'bimbangan-mata-kuliah-jurusan*', 'nonaktif*') ? ' ' : '' }}">
+                    <a style="cursor: pointer;"><span>Program</span> <i class=" nav-link scrollto fas fa-caret-down" style="margin-left:-10px;"></i></a>
                     <ul style="border-radius: 15px;">
                         <li><a class="nav-link scrollto" href="">Bimbingan
                                 Skripsi
                                 Online (BSO)</a></li>
-                        <li><a class="nav-link scrollto"
-                                href="">Bimbingan Mata
+                        <li><a class="nav-link scrollto" href="">Bimbingan Mata
                                 Kuliah Jurusan (BMJ)</a></li>
                         <li><a class="nav-link scrollto" href="">Kelas Tugas Kuliah (KTK)</a>
                         </li>
@@ -610,8 +535,7 @@
                     </ul>
                 </li>
                 <li class="dropdown{{ Request::is('skripsi*', 'nonaktif*') ? ' ' : '' }}">
-                    <a style="cursor: pointer;"><span>Workshop</span> <i class="nav-link scrollto fas fa-caret-down"
-                            style="margin-left:-10px;"></i></a>
+                    <a style="cursor: pointer;"><span>Workshop</span> <i class="nav-link scrollto fas fa-caret-down" style="margin-left:-10px;"></i></a>
                     <ul style="border-radius: 15px;">
                         <li><a class="nav-link scrollto" href="">Skripsi</a></li>
                         <li><a class="nav-link scrollto" href="">KTI</a></li>
@@ -619,8 +543,7 @@
                 </li>
 
                 <li class="dropdown{{ Request::is('nonaktif*') && !Request::is('skripsi*') ? ' ' : '' }}">
-                    <a style="cursor: pointer;"><span>Creative Class</span> <i
-                            class=" nav-link scrollto fas fa-caret-down" style="margin-left:-10px;"></i></a>
+                    <a style="cursor: pointer;"><span>Creative Class</span> <i class=" nav-link scrollto fas fa-caret-down" style="margin-left:-10px;"></i></a>
                     <ul style="border-radius: 15px;">
                         <li><a class="nav-link scrollto" href="">Kelas Adobe Photoshop</a>
                         </li>
@@ -628,8 +551,7 @@
                 </li>
 
                 <li class="dropdown{{ Request::is('nonaktif*') && !Request::is('skripsi*') ? ' ' : '' }}">
-                    <a style="cursor: pointer;"><span>Ebook</span> <i class=" nav-link scrollto fas fa-caret-down"
-                            style="margin-left:-10px;"></i></a>
+                    <a style="cursor: pointer;"><span>Ebook</span> <i class=" nav-link scrollto fas fa-caret-down" style="margin-left:-10px;"></i></a>
                     <ul style="border-radius: 15px;">
                         <li><a class="nav-link scrollto" href="/halaman-ebook">Ebook Class Program</a>
                         </li>
@@ -639,14 +561,11 @@
                     </ul>
                 </li>
 
-                <li><a class="nav-link scrollto" href="javascript:void(0)" onclick="scrollToAlur('konsultasi')"
-                        style="margin-right:30px">Alur bimbingan</a></li>
+                <li><a class="nav-link scrollto" href="javascript:void(0)" onclick="scrollToAlur('konsultasi')" style="margin-right:30px">Alur bimbingan</a></li>
 
                 <li><a class="nav-link scrollto" href="#testimonials" style="margin-right:30px">Mentor</a></li>
-                <li><a class="nav-link scrollto" href="javascript:void(0)" onclick="scrollToTesti('testibaru')"
-                        style="margin-right:30px">Testimoni</a></li>
-                <li><a class="nav-link scrollto" href="javascript:void(0)" onclick="scrollToFAQ('faq')"
-                        style="margin-right:30px">FAQ</a></li>
+                <li><a class="nav-link scrollto" href="javascript:void(0)" onclick="scrollToTesti('testibaru')" style="margin-right:30px">Testimoni</a></li>
+                <li><a class="nav-link scrollto" href="javascript:void(0)" onclick="scrollToFAQ('faq')" style="margin-right:30px">FAQ</a></li>
     </div>
     </div>
     </li>
@@ -1263,7 +1182,7 @@
 </main>
 
 @if (Request::is('halaman-ebook', 'detail-ebook/*', 'pembayaranEbook/*', 'mimaEbook', 'transferEbook/*', 'katalog'))
-    @include('layout.footerEbook')
+@include('layout.footerEbook')
 @else
-    @include('layout.footer')
+@include('layout.footer')
 @endif
