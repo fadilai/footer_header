@@ -54,7 +54,7 @@
             </style>
 
             <div class="masbro">
-                <a href="/index"><img src="{{ asset('assets/img/logo/logo3.png') }}" class="logo" style="" alt="Deskripsi Gambar">
+                <a href="/index"><img src="{{ asset('assets/img/logo/logo3.png') }}" class="logo" alt="Deskripsi Gambar">
                 </a>
             </div>
 
@@ -63,7 +63,6 @@
                 <button class="search-button" type="submit" style="font-weight: 500; font-family: 'Montserrat', sans-serif;">
                     <i class="fas fa-magnifying-glass"></i> CARI
                 </button>
-
             </form>
 
 
@@ -151,7 +150,6 @@
                 <style>
                     #konfirmasiModal .modal-content {
                         background: url('{{ asset(' assets/img/bg/bgkeluar.png') }}') center;
-
                         background-size: cover;
                     }
 
@@ -416,10 +414,6 @@
                         @if ($counter == 0)
                         {{-- Tidak ada notifikasi --}}
                         <style>
-                            .icon-container {
-                                /*text-align: center;*/
-                            }
-
                             /* Adjust the size of the icon */
                             #movingIcon {
                                 font-size: 100px;
@@ -507,6 +501,7 @@
             @endif
 
         </div>
+    </div>
 </section>
 
 <style>
@@ -516,7 +511,6 @@
 </style>
 <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
-
         <nav id="navbar" class="navbar">
             <ul>
                 <li><a class="nav-link scrollto{{ Request::is('/') ? ' active' : '' }}" href="/index" style="margin-right:30px">Home</a></li>
@@ -566,13 +560,10 @@
                 <li><a class="nav-link scrollto" href="#testimonials" style="margin-right:30px">Mentor</a></li>
                 <li><a class="nav-link scrollto" href="javascript:void(0)" onclick="scrollToTesti('testibaru')" style="margin-right:30px">Testimoni</a></li>
                 <li><a class="nav-link scrollto" href="javascript:void(0)" onclick="scrollToFAQ('faq')" style="margin-right:30px">FAQ</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle" style="color: white;"></i>
+        </nav>
     </div>
-    </div>
-    </li>
-    </li>
-    </ul>
-    <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav>
 
     <!-- Digunakan untuk section FAQ -->
     <script>
@@ -607,7 +598,6 @@
             }
         }
     </script>
-
     <!-- Digunakan untuk section Alur Bimbingan -->
     <script>
         function scrollToAlur(sectionId) {
@@ -641,7 +631,6 @@
             }
         }
     </script>
-
     <!-- Digunakan untuk section Testimoni -->
     <script>
         function scrollToTesti(sectionId) {
@@ -675,11 +664,6 @@
             }
         }
     </script>
-
-
-
-
-
 </header>
 
 
