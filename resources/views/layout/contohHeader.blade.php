@@ -229,8 +229,6 @@
                 <!-- Button trigger modal -->
                 <style>
                     .floating-button {
-
-
                         .flo .floating-button {
                             position: fixed;
                             bottom: 20px;
@@ -600,8 +598,7 @@
                         <li><a class="nav-link scrollto" href="">Bimbingan
                                 Skripsi
                                 Online (BSO)</a></li>
-                        <li><a class="nav-link scrollto"
-                                href="">Bimbingan Mata
+                        <li><a class="nav-link scrollto" href="">Bimbingan Mata
                                 Kuliah Jurusan (BMJ)</a></li>
                         <li><a class="nav-link scrollto" href="">Kelas Tugas Kuliah (KTK)</a>
                         </li>

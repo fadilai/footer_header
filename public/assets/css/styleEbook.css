@@ -1,22 +1,4 @@
-/* Gaya untuk layar dengan lebar minimal 1024px (laptop) */
 
-@media only screen and (min-width: 1024px) {
-    /* Gaya CSS untuk tampilan laptop di sini */
-}
-
-
-/* Gaya untuk layar dengan lebar antara 768px dan 1023px (tablet) */
-
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-    /* Gaya CSS untuk tampilan tablet di sini */
-}
-
-
-/* Gaya untuk layar dengan lebar maksimal 767px (ponsel cerdas/HP) */
-
-@media only screen and (max-width: 767px) {
-    /* Gaya CSS untuk tampilan ponsel cerdas/HP di sini */
-}
 
 body {
     justify-content: center;
