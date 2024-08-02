@@ -4,20 +4,6 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11">
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 <footer id="footer">
-
-    <!-- <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div> -->
     <style>
         .footer-top {
             font-family: poppins;
@@ -79,11 +65,10 @@
             <div class="row">
                 <!-- Left Section with Logo and Text -->
                 <div class="col-2">
-                    <a href="index.php"><img src="{{ asset('assets/img/logo/logo3.png') }}" style="width:100%"
-                            alt=""></a>
+                    <a href="index.php"><img src="{{ asset('assets/img/logo/logo3.png') }}" style="width:100%" alt=""></a>
                 </div>
 
-                <div class="col-lg-4 col-md-3">
+                <div class="col-lg-4 col-md-6">
                     <div class="text-container">
                         <p>Bimbingan Belajar Online Perkuliahan dan Persiapan Karir dengan Sistem Kenaikan Kelas Pertama
                             di Indonesia.</p>
@@ -92,51 +77,30 @@
 
                 <!-- Right Section with Social Media Links -->
 
-                <div class="col-lg-4 col-md-3 ml-auto" style=" z-index:1;">
-                    <!-- <div class="social-links" style="text-align: right;">
-                        <img src="assets/img/logo/yt.png" class="youtube rounded-circle" style="border-radius: 100%;  width: 50px;" alt="">
-                        <img src="assets/img/logo/instagram.webp" class="youtube rounded-circle" style="border-radius: 100%; width: 50px;" alt="">
-                        <img src="assets/img/logo/tiktok.png" class="youtube rounded-circle" style="border-radius: 100%; width: 50px;  " alt="">
-                    </div> -->
-                    <div class="social-links" style="margin-left: 180px; z-index:1;">
-                        <a href="https://www.youtube.com/channel/UCjpX70gVQp0iUfHjrDxFhqQ"
-                            class="youtube rounded-circle" style="padding: 10px; z-index:1;">
+                <div class="links col-lg-4 col-md-4" style=" z-index:1;">
+                    <div class="social-links" style=" z-index:1;">
+                        <a href="https://www.youtube.com/channel/UCjpX70gVQp0iUfHjrDxFhqQ" class="youtube rounded-circle" style="padding: 10px; z-index:1;">
                             <i class="bx bxl-youtube" style="font-size: 30px;"></i>
                         </a>
-                        <a href="https://www.tiktok.com/@classprogram" class="tiktok rounded-circle"
-                            style="padding: 10px; z-index:1;">
+                        <a href="https://www.tiktok.com/@classprogram" class="tiktok rounded-circle" style="padding: 10px; z-index:1;">
                             <i class="bx bxl-tiktok" style=" color:black; font-size: 28px;"></i>
                         </a>
-                        <a href="https://www.instagram.com/classprogram.id/" class="instagram rounded-circle"
-                            style="padding: 10px;z-index:1;">
-                            <i class="bx bxl-instagram"
-                                style="font-size: 30px; background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80); background-clip: text; -webkit-background-clip: text;   color: transparent;"></i>
+                        <a href="https://www.instagram.com/classprogram.id/" class="instagram rounded-circle" style="padding: 10px;z-index:1;">
+                            <i class="bx bxl-instagram" style="font-size: 30px; background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80); background-clip: text; -webkit-background-clip: text;   color: transparent;"></i>
                         </a>
                     </div>
-
                 </div>
 
-                <img src="{{ asset('assets/img/bg/footergaris.png') }}" alt="Background Image" class="garis1"
-                    style="
-                stroke: #003EB5;
-               position: absolute;
-               width: 1100px;
-               margin-inline-start: -130px;
-               margin-top: -30px;
-               left:0;
-               height: 400px;
-               display: block;
-              ">
+                <img src="{{ asset('assets/img/bg/footergaris.png') }}" alt="Background Image" class="garis1" style="stroke: #003EB5; position: absolute; width: 1100px; margin-inline-start: -130px;margin-top: -30px; left:0; height: 400px; display: block;">
             </div>
         </div>
 
-
         <div class="container" style="margin-top: 30px;">
-            <div class="row">
+            <div class="row footer-list">
                 <!-- Background Image -->
 
                 <!-- Program Links -->
-                <div class="col-lg-4 col-md-3 footer-links">
+                <div class="col-lg-4 col-md-6 footer-links">
                     <h4>Hubungi Kami</h4>
                     <ul>
                         <li><a style="pointer-events: none; " href="#"><b>Alamat:</b> Jalan Bandara
@@ -155,7 +119,7 @@
                 </div>
 
                 <!-- Classprogram Address -->
-                <div class="col-lg-4 col-md-3 footer-links">
+                <div class="col-lg-4 col-md-6 footer-links">
                     <h4>Program Kelas</h4>
                     <ul>
                         <li> <a href=""> Bimbingan Skripsi Online (BSO)</a></li>
@@ -182,7 +146,7 @@
                     </ul>
                 </div>
 
-                <div class="col-lg-4 col-md-3 footer-links" style="z-index: 2">
+                <div class="col-lg-4 col-md-6 footer-links" style="z-index: 2">
                     <h4>Workshop</h4>
                     <ul>
                         <li><a href="">Skripsi<br></a></li>
@@ -205,20 +169,19 @@
                             color: #000 !important;
                         }
                     </style><!-- Register Modal -->
-                    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog"
-                        aria-labelledby="registerModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document" style="margin-top:150px;">
                             <div id="registerContent" class="modal-content">
                                 <div class="modal-header" style="color:#000">
                                     @auth
-                                        @if (isset(auth()->user()->name))
-                                            @php
-                                                $userName = auth()->user()->name;
-                                            @endphp
-                                            <h5 class="modal-title" id="registerModalLabel">Hai, {{ $userName }}</h5>
-                                        @endif
+                                    @if (isset(auth()->user()->name))
+                                    @php
+                                    $userName = auth()->user()->name;
+                                    @endphp
+                                    <h5 class="modal-title" id="registerModalLabel">Hai, {{ $userName }}</h5>
+                                    @endif
                                     @else
-                                        <h5 class="modal-title" id="registerModalLabel">Hai, Sobat Insans.</h5>
+                                    <h5 class="modal-title" id="registerModalLabel">Hai, Sobat Insans.</h5>
                                     @endauth
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
@@ -226,14 +189,14 @@
                                 </div>
                                 <div class="modal-body">
                                     @auth
-                                        @if (isset(auth()->user()->name))
-                                            <p style="color:#000">Kamu sudah daftar menggunakan akun
-                                                <strong>{{ $userName }}</strong>.
-                                            </p>
-                                        @endif
+                                    @if (isset(auth()->user()->name))
+                                    <p style="color:#000">Kamu sudah daftar menggunakan akun
+                                        <strong>{{ $userName }}</strong>.
+                                    </p>
+                                    @endif
                                     @else
-                                        <p style="color:#000">Kamu belum daftar. Silakan <a href="/register">daftar</a>.
-                                        </p>
+                                    <p style="color:#000">Kamu belum daftar. Silakan <a href="/register">daftar</a>.
+                                    </p>
                                     @endauth
                                     <!-- Tambahan isi formulir jika diperlukan -->
                                 </div>
@@ -242,20 +205,19 @@
                     </div>
 
                     <!-- Login Modal -->
-                    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
-                        aria-labelledby="loginModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document" style="margin-top:150px;">
                             <div class="modal-content">
                                 <div class="modal-header" style="color:#000">
                                     @auth
-                                        @if (isset(auth()->user()->name))
-                                            @php
-                                                $userName = auth()->user()->name;
-                                            @endphp
-                                            <h5 class="modal-title" id="loginModalLabel">Hai, {{ $userName }}</h5>
-                                        @endif
+                                    @if (isset(auth()->user()->name))
+                                    @php
+                                    $userName = auth()->user()->name;
+                                    @endphp
+                                    <h5 class="modal-title" id="loginModalLabel">Hai, {{ $userName }}</h5>
+                                    @endif
                                     @else
-                                        <h5 class="modal-title" id="loginModalLabel">Hai, Sobat Insans.</h5>
+                                    <h5 class="modal-title" id="loginModalLabel">Hai, Sobat Insans.</h5>
                                     @endauth
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
@@ -263,13 +225,13 @@
                                 </div>
                                 <div class="modal-body">
                                     @auth
-                                        @if (isset(auth()->user()->name))
-                                            <p style="color:#000">Kamu sudah masuk menggunakan akun
-                                                <strong>{{ $userName }}</strong>.
-                                            </p>
-                                        @endif
+                                    @if (isset(auth()->user()->name))
+                                    <p style="color:#000">Kamu sudah masuk menggunakan akun
+                                        <strong>{{ $userName }}</strong>.
+                                    </p>
+                                    @endif
                                     @else
-                                        <p style="color:#000">Kamu belum masuk. Silakan <a href="/login">masuk</a>.</p>
+                                    <p style="color:#000">Kamu belum masuk. Silakan <a href="/login">masuk</a>.</p>
                                     @endauth
                                     Tambahan isi formulir jika diperlukan
                                 </div>
@@ -277,25 +239,12 @@
                         </div>
                     </div>
 
-                    <!--<ul>-->
-                    <!--    @auth-->
-                        <!--        <li><a href="#" data-toggle="modal" data-target="#registerModal">Daftar</a></li>-->
-                        <!--        <li><a href="#" data-toggle="modal" data-target="#loginModal" style="margin-top: -10px;">Masuk</a></li>-->
-                    <!--    @else-->
-                        <!--        <li><a href="/register">Daftar</a></li>-->
-                        <!--        <li><a href="/login" style="margin-top: -10px;">Masuk</a></li>-->
-                    <!--    @endauth-->
-                    <!--</ul>-->
-
                 </div>
                 <style>
                     .link-container {
-                        /* Atur tinggi container sesuai kebutuhan */
                         height: 300px;
-                        /* Atur posisi relative untuk child absolute (cover-image) */
                         position: relative;
                         overflow: hidden;
-                        /* Agar gambar yang melebihi container di potong */
                     }
 
                     .cover-image {
@@ -328,51 +277,24 @@
                     }
                 </style>
                 <div class="link-container">
-                    <a style="pointer-events: none; "
-                        href="https://www.instagram.com/reel/C1eDXOAPKPI/?igsh=NTc4MTIwNjQ2YQ=="
-                        style="text-decoration: none; color: black;">
-                        <img class="cover-image" src="{{ asset('assets/img/bg/hp.png') }}" alt="Workshop Image"
-                            style="z-index:3">
+                    <a style="pointer-events: none; " href="https://www.instagram.com/reel/C1eDXOAPKPI/?igsh=NTc4MTIwNjQ2YQ==" style="text-decoration: none; color: black;">
+                        <img class="cover-image" src="{{ asset('assets/img/bg/hp.png') }}" alt="Workshop Image" style="z-index:3">
                     </a>
                 </div>
 
-
-
-                <!-- <div class="col-lg-3 col-md-3 footer-links">
-                    <h4>Daftar Sekarang</h4>
-                    <ul>
-                        <li><a href="#">Daftar</a></li>
-                        <li><a href="#">Masuk</a></li>
-                        <img src="{{ asset('assets/img/bg/hp.png') }}" alt="Workshop Image">
-                    </ul>
-                </div> -->
-
                 <!-- Download App Section -->
-                <div class="col-lg-2     col-md-3 footer-links">
+                <!-- <div class="col-lg-2     col-md-3 footer-links">
                     {{-- <h4>Download aplikasinya</h4> --}}
-
-                </div>
+                </div> -->
             </div>
         </div>
 
 
         <div class="container" style="margin-top: -50px;">
-            <hr
-                style="   border: none;
+            <hr style="   border: none;
                 height: 2px; /* Default height */
                 background-color: white; margin-bottom: -300;">
         </div>
-        <!--<div class="container py-4">-->
-        <!--    <div class="copyright">-->
-        <!--        <strong><span></span></strong>Copyright © 2023-2024 Class Program-->
-
-        <!--    </div>-->
-        <!--      <div class="container" style="">-->
-        <!--    <hr-->
-        <!--        style="   border: none;-->
-        <!--        height: 2px; /* Default height */-->
-        <!--        background-color: white; ">-->
-        <!--</div>-->
         <style>
             #footer .credits a {
                 text-decoration: none;
@@ -393,22 +315,13 @@
             <div class="copyright">
                 <strong><span></span></strong>Copyright © 2024 Class Program
             </div>
-            <div class="credits" style="margin-right:  4px !importan; margin-left:  4px !importan;">
+            <div class="credits" style="margin-right:  4px !important; margin-left:  4px !important;">
                 <a href="/disclaimer">Disclaimer</a>
-
-                -
-
                 <a href="/tentang">Tentang</a>
-                -
-
                 <a href="/policy">Privacy Policy</a>
-                -
-
                 <a href="/condition">Terms and Condition</a>
             </div>
         </div>
-
-    </div>
     </div>
 
     <style>
@@ -429,7 +342,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: ##25D366;
+            background-color: #25D366;
             margin-top: 10px;
 
         }
@@ -450,15 +363,13 @@
         #chat-dialog {
             display: flex;
             flex-direction: column;
-
             background-color: white;
             border-radius: 0 0 10px 10px;
 
         }
 
         .chat-bubble {
-            background-color: ##25D366;
-
+            background-color: #25D366;
             border-radius: 10px;
             margin-top: 20px;
             margin-left: 10px;
@@ -470,9 +381,6 @@
             transition: box-shadow 0.3s ease, background-color 0.3s ease;
         }
 
-
-
-
         .chat-bubble p {
             margin: 0;
             font-size: 14px;
@@ -481,10 +389,8 @@
 
         .chat-bubble a {
             color: #25D366;
-
             text-decoration: none;
             font-weight: bold;
-
         }
 
         .send-logo {
@@ -515,8 +421,6 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
             /* Added box shadow */
             transition: box-shadow 0.3s ease, background-color 0.3s ease;
-
-
         }
 
         .chat-bubblee:hover {
@@ -621,9 +525,6 @@
             color: #003EB5;
         }
 
-
-
-
         #whatsapp-button::before {
             content: attr(title);
             display: none;
@@ -648,41 +549,25 @@
         }
     </style>
 
-    </head>
-
     <body>
-        <!--<div id="help-message"-->
-        <!--    style="font-family:'Manrope';box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); margin-top:50px;-->
-        <!--">Butuh bantuan?</div>-->
         <div id="whatsapp-button" onclick="showWelcomeMessage();" title="Butuh bantuan?">
-
             <img src="{{ asset('assets/img/bg/whatsappp.png') }}" alt="WhatsApp" class="first-image" />
             <img src="{{ asset('assets/img/bg/cs.png') }}" alt="WhatsApp" class="second-image" />
-            <!-- <img src="{{ asset('assets/img/bg/wa2.png') }}" alt="WhatsApp" class="second-image" /> -->
-            <!--<span id="whatsapp-text">Ada Pertanyaan? <br> Hubungi Kak Dewi</span>-->
         </div>
-
-
-
-        <div id="welcome-message" style="">
+        <!-- Batas -->
+        <div id="welcome-message">
+            <!-- Pop up header -->
             <div id="popup-header" class="header-container">
                 <h3 style="font-family:'Manrope';">Class Program</h3>
-                <button
-                    style="font-size: 25px; color: #ffffff; background-color: transparent; border: none; margin-bottom:0px !important;"
-                    class="bi bi-x-circle tombol" onclick="closeWelcomeMessage()"></button>
+                <button style="font-size: 25px; color: #ffffff; background-color: transparent; border: none; margin-bottom:0px !important;" class="bi bi-x-circle tombol" onclick="closeWelcomeMessage()"></button>
             </div>
+            <!-- Chat Dialog -->
             <div id="chat-dialog">
                 <div class="chat-bubble">
-                    <!-- <p>Jika ada yang ingin ditanyakan, silakan <a id="contact" onclick="openWhatsApp()">hubungi Minma di sini</a>.</p> -->
                     <p style="font-family:'Manrope';pointer-events: none; ">Selamat datang di Class Program. <br>Jika
                         ada yang ingin
-                        ditanyakan, silahkan hubungi Kak Dewi <a style="color:#444444; font-weight:200;"
-                            href="javascript:void(0);" onclick="openWhatssApp()">di sini</a>.</p>
+                        ditanyakan, silahkan hubungi Kak Dewi <a style="color:#444444; font-weight:200;" href="javascript:void(0);" onclick="openWhatssApp()">di sini</a>.</p>
                 </div>
-
-                <!-- <div class=" send-logo">Class Program
-                </div>
-                User -->
                 <style>
                     .bubble-effect {
                         position: relative;
@@ -699,52 +584,40 @@
                         }
                     }
                 </style>
-
-
+                <!-- Chat Bubble -->
                 <div class="chat-bubblee" onclick="openWhatssApp()" style="cursor: pointer !important;">
-                    <img class="bubble-effect" src="{{ asset('assets/img/bg/send-pesawat.png') }}"
-                        alt="Alternate Text" style="width: 30px; margin-left: 8px; margin-right: 10px;">
-
-                    <p
-                        style="margin-top:18px; font-size:16px; font-weight:700; font-family:'Manrope'; pointer-events: none;">
+                    <img class="bubble-effect" src="{{ asset('assets/img/bg/send-pesawat.png') }}" alt="Alternate Text" style="width: 30px; margin-left: 8px; margin-right: 10px;">
+                    <p style="margin-top:18px; font-size:16px; font-weight:700; font-family:'Manrope'; pointer-events: none;">
                         Class Program
                     </p>
                 </div>
-
-
             </div>
         </div>
-
+        <!-- 0 -->
         <script>
             var isSecondImageVisible = false;
 
             function changeImage() {
                 var button = document.getElementById("whatsapp-button");
                 isSecondImageVisible = !isSecondImageVisible;
-
                 if (isSecondImageVisible) {
                     button.classList.add("active");
                 } else {
                     button.classList.remove("active");
                 }
             }
-
             // Auto-change image every 10 seconds
             setInterval(changeImage, 10000);
         </script>
-
-
-
+        <!-- 1 -->
         <script>
             function showWelcomeMessage() {
                 var welcomeMessage = document.getElementById("welcome-message");
                 var whatsappButton = document.getElementById("whatsapp-button");
                 var helpMessage = document.getElementById("help-message");
-
                 welcomeMessage.style.display = "block";
                 whatsappButton.style.display = "none";
                 helpMessage.style.display = "none";
-
                 // Toggle the images after the welcome message is displayed
                 toggleImages();
             }
@@ -753,7 +626,6 @@
                 var welcomeMessage = document.getElementById("welcome-message");
                 var whatsappButton = document.getElementById("whatsapp-button");
                 var helpMessage = document.getElementById("help-message");
-
                 welcomeMessage.style.display = "none";
                 whatsappButton.style.display = "flex";
                 helpMessage.style.display = "inline-block"; // Menampilkan kembali help-message
@@ -764,22 +636,14 @@
                 var button = document.getElementById("whatsapp-button");
                 var firstImage = button.querySelector(".first-image");
                 var secondImage = button.querySelector(".second-image");
-
                 // Toggle the active class to switch between images
                 button.classList.toggle("active");
             }
         </script>
 
-
-
-
-
-
         <div class="popup-bro" id="popup-bro">
             <p>
-                <strong
-                    style="color: black;
-        font-family: Manrope;
+                <strong style="color: black;font-family: Manrope;
         font-size: 16px;
         font-style: normal;
         font-weight: 800;
@@ -888,7 +752,6 @@
             const popupText = document.getElementById('popup-text');
 
             let currentIndex = 0;
-
 
             function getRandomIndex() {
                 return Math.floor(Math.random() * popupMessages.length);
