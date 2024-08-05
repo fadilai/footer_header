@@ -1,14 +1,70 @@
 /* Gaya untuk layar dengan lebar minimal 1024px (laptop) */
 
 @media only screen and (min-width: 1024px) {
-    /* Gaya CSS untuk tampilan laptop di sini */
+        .links{
+        margin-left: auto;
+        align-items: start;
+        display: flex;
+        justify-content: left;
+        }
+        .social-links{
+            margin-left: 180px;
+        }
+    
+        .footer-list{
+            justify-content: left;
+        }
+    
+        #topbar .logo{
+            width: 30%;
+            height: 30%;
+        }
+    
+        .logo-footer{
+            display: flex;
+        }
+    
+        #footer .footer-top .social-links a{
+            padding: 10 px;
+        }
 }
 
 
 /* Gaya untuk layar dengan lebar antara 768px dan 1023px (tablet) */
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    /* Gaya CSS untuk tampilan tablet di sini */
+    .links{
+        margin-left: 0;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .link-container{
+        display: none;
+    }
+    .social-links{
+        margin-left: 0;
+    }
+
+    .footer-list{
+        justify-content: left !important;
+    }
+    .search-input{
+        width: 350px;
+    }
+
+    #topbar .logo{
+        width: 40%;
+        height: 40%;
+    }
+
+    .logo-footer{
+        display: flex;
+    }
+    #footer .footer-top .social-links a{
+        padding: 4px;
+    }
 }
 
 
@@ -141,8 +197,6 @@ a:hover {
     /* font-size: 30px; */
     margin-top: 5px;
     margin-bottom: 5px;
-    width: 30%;
-    height: 30%;
     max-height: 180px;
     /* max-width: 400px; */
     /* margin-right: -100px; */
@@ -672,15 +726,12 @@ border-bottom-right-radius: 10px; */
 }
 
 .link-container {
-    height: 300px;
-    position: relative;
     overflow: hidden;
     position: relative;
-    width: 450px !important;
-    height: auto !important;
-    margin-left: 800px;
-    margin-top: -380px;
-    overflow: hidden;
+    max-width: 450px !important;
+    height: auto;
+    margin-left: 800px; /* Masih Bisa Di QC*/
+    margin-top: -390px;
 }
 
 #footer .credits {
@@ -836,13 +887,14 @@ position: absolute; */
     color: red;
     margin-top: 8px;
     line-height: 1;
-    padding: 8px 0;
+    padding: 10px;
     margin-right: 4px;
     border-radius: 100%;
     text-align: center;
     /* width: 36px;
     height: 36px; */
     transition: 0.3s;
+    z-index: 1;
 }
 
 #footer .footer-top .social-links a:hover {
@@ -1086,7 +1138,7 @@ position: absolute; */
 
 #whatsapp-button {
     position: fixed;
-    bottom: 0px;
+    bottom: 10px;
     /* Jarak dari bawah */
     left: 20px;
     /* Jarak dari kiri */
@@ -1144,9 +1196,9 @@ position: absolute; */
 
 #whatsapp-button img {
     margin-right: 10px;
-    width: 75px;
-    height: 75px;
     border-radius: 50%;
+    width: 60px;
+    height: 60px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
@@ -3479,7 +3531,7 @@ svg {
 
 /* Reviews */
 
-#reviews {}
+/* #reviews {} */
 
 #reviews .btn-get-awaaal {
     color: #1a9086;
@@ -4105,38 +4157,3 @@ svg {
 .navbar li:hover>a {
     color: #ffffff;
 }
-
-/* Responsive design untuk tablet */
-@media (min-width: 768px) {
-    .links{
-        margin-left: 0;
-    }
-
-    .link-container{
-        display: none;
-    }
-    .social-links{
-        margin-left: 0;
-    }
-
-    .footer-list{
-        justify-content: left !important;
-    }
-}
-
-@media (min-width: 1024px) {
-    .link-container{
-        display: block;
-    }
-    .links{
-    margin-left: auto;
-    }
-    .social-links{
-        margin-left: 180px;
-    }
-
-    .footer-list{
-        justify-content: left;
-    }
-}
-/* Responsive design untuk tablet */

@@ -21,7 +21,7 @@
             width: auto;
         }
 
-        .link-container {
+        /* .link-container {
             position: relative;
             width: 450px !important;
             height: auto !important;
@@ -29,7 +29,7 @@
             margin-top: -380px;
             overflow: hidden;
             z-index: 1;
-        }
+        } */
 
         .link-container a {
             display: block;
@@ -64,11 +64,11 @@
         <div class="container">
             <div class="row">
                 <!-- Left Section with Logo and Text -->
-                <div class="col-2">
+                <div class="col-lg-2 col-md-3 logo-footer">
                     <a href="index.php"><img src="{{ asset('assets/img/logo/logo3.png') }}" style="width:100%" alt=""></a>
                 </div>
-
-                <div class="col-lg-4 col-md-6">
+                <!-- Text Left Section -->
+                <div class="col-lg-4 col-md-5">
                     <div class="text-container">
                         <p>Bimbingan Belajar Online Perkuliahan dan Persiapan Karir dengan Sistem Kenaikan Kelas Pertama
                             di Indonesia.</p>
@@ -79,13 +79,13 @@
 
                 <div class="links col-lg-4 col-md-4" style=" z-index:1;">
                     <div class="social-links" style=" z-index:1;">
-                        <a href="https://www.youtube.com/channel/UCjpX70gVQp0iUfHjrDxFhqQ" class="youtube rounded-circle" style="padding: 10px; z-index:1;">
+                        <a href="https://www.youtube.com/channel/UCjpX70gVQp0iUfHjrDxFhqQ" class="youtube rounded-circle">
                             <i class="bx bxl-youtube" style="font-size: 30px;"></i>
                         </a>
-                        <a href="https://www.tiktok.com/@classprogram" class="tiktok rounded-circle" style="padding: 10px; z-index:1;">
+                        <a href="https://www.tiktok.com/@classprogram" class="tiktok rounded-circle">
                             <i class="bx bxl-tiktok" style=" color:black; font-size: 28px;"></i>
                         </a>
-                        <a href="https://www.instagram.com/classprogram.id/" class="instagram rounded-circle" style="padding: 10px;z-index:1;">
+                        <a href="https://www.instagram.com/classprogram.id/" class="instagram rounded-circle">
                             <i class="bx bxl-instagram" style="font-size: 30px; background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80); background-clip: text; -webkit-background-clip: text;   color: transparent;"></i>
                         </a>
                     </div>
@@ -241,12 +241,6 @@
 
                 </div>
                 <style>
-                    .link-container {
-                        height: 300px;
-                        position: relative;
-                        overflow: hidden;
-                    }
-
                     .cover-image {
                         /* Atur lebar dan tinggi gambar */
                         width: 100%;
@@ -288,8 +282,7 @@
                 </div> -->
             </div>
         </div>
-
-
+        <!--  -->
         <div class="container" style="margin-top: -50px;">
             <hr style="   border: none;
                 height: 2px; /* Default height */
@@ -309,8 +302,7 @@
                 /* Warna tautan saat dihover */
             }
         </style>
-
-
+        <!--  -->
         <div class="container py-4">
             <div class="copyright">
                 <strong><span></span></strong>Copyright © 2024 Class Program
@@ -529,7 +521,8 @@
             content: attr(title);
             display: none;
             position: absolute;
-            margin-left: 150px;
+            margin-left: 130px;
+            /* Masih bisa di QC */
             transform: translateX(-50%);
             height: 28px;
             line-height: 28px;
