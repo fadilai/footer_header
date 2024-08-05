@@ -146,7 +146,7 @@
                     </ul>
                 </div>
 
-                <div class="col-lg-4 col-md-6 footer-links" style="z-index: 2">
+                <div class="col-lg-4 col-md-6 footer-links" style="z-index: 99999">
                     <h4>Workshop</h4>
                     <ul>
                         <li><a href="">Skripsi<br></a></li>
